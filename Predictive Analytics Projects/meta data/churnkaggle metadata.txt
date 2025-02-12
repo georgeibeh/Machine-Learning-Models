@@ -1,0 +1,32 @@
+in this competition you are provided with pre-processed data. Your data will have a dimension of N x 8.
+Fields:
+
+    Customer_ID: Unique ID for each customer.
+    Sessions: Connection details for sessions.
+    Cell_ID: Cell in which device is being used.
+    District_ID: District where device is being used.
+    Complaints_U: Complaint feature 1.
+    Complaints_R: Complaint feature 2.
+    Complaints_W: Complaint feature 3.
+    Label
+
+The aim of this competition is to determine weather a customer will churn using usage detail.
+
+Since this is a binary-class problem, you are expected to try linear regression and random forests, and try to minimize the log loss.
+
+The evaluation metric for this competition is log loss. Log loss calculates overall loss by taking the mean log of probability of correct class. The log of 1 is 0, if the probability of belonging to correct is close to 1, less loss is incurred. As the probability of belonging to correct class approaches 0, more loss is added.
+
+You are expected to reduce your log loss.
+
+Submission Format
+
+For every customer in the dataset, submission files should contain three columns: INDEX, PROB_LOYAL and PROB_LEAVE. Every row should have a probability of staying (PROB_LOYAL) and probability of leaving (PROB_LEAVE).
+
+The file should contain a header and have the following format:
+
+index,PROB_LOYAL, PROB_LEAVE
+0, 0.5, 0.5
+1, 0.7, 0.3
+2, 0.2, 0.8
+3, 0.35, 0.65
+etc.
